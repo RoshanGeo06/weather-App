@@ -1,0 +1,18 @@
+how to get longitude and langitude 
+
+
+
+var x = document.getElementById("demo");
+
+function getlocation(){
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(showPosition);
+	}else{
+		x.innerHTML = "Geolocation is not supported byt 
+	}
+}
+
+function showPosition(position){
+	x.innerHTML = "latitude: " + position.coords.latitude +
+	"<br>Longitude: " + position.coords.longitude;
+}

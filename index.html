@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="icon" id="favicon" type="image/png" href="./animated/weather.svg">
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="map"></div>
+        <div id="weather">
+            <h1 class="location-timezone"></h1>
+            <p class="icon"></p>
+            <div class="temperature-description"></div>
+            <h2 class="temperature-degree"></h2>
+            <div>
+                <span class="maxTemp"></span>
+                <span class="minTemp"></span>
+            </div>
+            <div class="windSpeed"></div>
+        </div>
+    </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

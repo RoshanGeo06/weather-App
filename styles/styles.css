@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+}
+
+#container {
+    position: relative;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+}
+
+#weather {
+    z-index: 1000;
+    background-color: whitesmoke;
+    position: absolute;
+    width: 350px;
+    top: 100px;
+    right: 100px;
+    border-radius: 10px;
+    color: black;
+    font-family: Helvetica Neue, sans-serif;
+    text-align: center;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+#weather .location-timezone {
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+
+#weather .icon {
+    width: 150px;
+    min-width: 50px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+#weather .temperature-description {
+    font-size: 30px;
+}
+
+#weather .temperature-degree {
+    font-size: 40px;
+    font-weight: 400;
+    padding: 0.3em 0;
+}
+
+#weather .maxTemp {
+    text-align: right;
+    padding-right: 15px;
+}
+
+#weather .minTemp {
+    text-align: left;
+    padding-left: 15px;
+}
+
+#weather .windSpeed,
+#weather .maxTemp,
+#weather .minTemp {
+    font-size: 20px;
+}
+
+/* Responsive ness of the website */
+@media screen and (max-width: 720px) {
+    #weather {
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        right: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    #weather .location-timezone {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    #weather .icon {
+        width: 90px;
+        height: 90px;
+        margin: 0;
+    }
+
+    #weather .temperature-degree {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    #weather .temperature-description {
+        font-size: 20px;
+        display: none;
+    }
+
+    #weather .windSpeed,
+    #weather .maxTemp,
+    #weather .minTemp {
+        display: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    #weather.expand {
+        bottom: 0;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+        top: auto;
+        width: 100%;
+        right: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    #weather.expand .location-timezone {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    #weather.expand .icon {
+        width: 90px;
+        height: 90px;
+        margin: 0;
+    }
+
+    #weather.expand .temperature-degree {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    #weather.expand .temperature-description {
+        font-size: 20px;
+        display: block;
+    }
+}
